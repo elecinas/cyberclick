@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLES -->
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Cyberclick</title>
+  </head>
+  <body onload="makeBD();readInput();">
+    <div class="container p-3 bg-light">
+      <h6 class="display-5 pt-5 text-center">Primer problema</h6>
+      <div
+        id="print-div"
+        class="border border-secondary border-2 rounded w-100 my-4 p-4"
+        style="min-height: 20vh"
+      >
+        Pulsa el botón para ver la secuencia
+      </div>
+      <div class="row">
+        <div class="col">
+          <button
+            id="print-numbers-button"
+            class="btn btn-secondary btn-lg btn-block"
+            style="width: 100%"
+          >
+            Escribe los números
+          </button>
+        </div>
+        <div class="col">
+          <button
+            id="erase-numbers-button"
+            class="btn btn-secondary btn-lg btn-block"
+            style="width: 100%"
+          >
+            Borra los números
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container p-3 bg-light">
+      <h6 class="display-5 pt-5 text-center">Segundo problema</h6>
+      <div class="row">
+        <div class="col">
+          <p class="text-center text-uppercase">Parte I</p>
+          <div
+            class="border border-secondary border-2 rounded w-100 my-4 p-4"
+            style="min-height: 20vh"
+          >
+            Pulsa el botón para ver el resultado
+          </div>
+          <button
+            type="submit"
+            id="print-numbers-button"
+            class="btn btn-secondary btn-lg btn-block"
+            style="width: 100%"
+          >
+            Contraseñas válidas
+          </button>
+        </div>
+        <div class="col">
+          <p class="text-center text-uppercase">Parte II</p>
+          <div
+            class="border border-secondary border-2 rounded w-100 my-4 p-4"
+            style="min-height: 20vh"
+          >
+            Pulsa el botón para ver el resultado
+          </div>
+          <button
+            id="print-numbers-button"
+            class="btn btn-secondary btn-lg btn-block"
+            style="width: 100%"
+          >
+            Contraseñas válidas
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- Number sequence script -->
+    <script src="./js/number_sequence.js"></script>
+    <script src="./js/bd_test.js"></script>
+    <!-- Bootstrap 5 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
