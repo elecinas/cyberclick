@@ -102,26 +102,43 @@ function inject_content(content, container) {
 
 //función que devuelve la cantidad de contraseñas correctas en la primera teoría de BD
 function correctPasswordI() {
-  
-    var string = bd[1].password;
+
+  var correct_passwords = 0;
+
+  for (let i = 0; i < bd.length; i++) {
+    var string = bd[i].password;
     var indices = [];
 
-    for (var i = 0; i < string.length; i++) {
-      if (string[i].toLowerCase() === bd[1].letter) indices.push(i);
+    for (var j = 0; j < string.length; j++) {
+      if (string[j].toLowerCase() === bd[i].letter) indices.push(j);
     }
 
     /** control */
-    console.log(bd[1].rule[0]);
-    console.log(bd[1].rule[1]);
-    console.log(bd[1].letter);
-    console.log(bd[1].password);
+    console.log(bd[i].rule[0]);
+    console.log(bd[i].rule[1]);
+    console.log(bd[i].letter);
+    console.log(bd[i].password);
     /** control */
 
-    if (indices.length > bd[1].rule[0] && indices.length < bd[1].rule[1]) {
-      console.log("aparece más de " + bd[1].rule[0] + " veces. Y menos de " + bd[1].rule[1] + " veces, por lo que: Contraseña correcta!");
+    if (indices.length > bd[i].rule[0] && indices.length < bd[i].rule[1]) {
+      console.log(
+        "aparece más de " +
+          bd[i].rule[0] +
+          " veces. Y menos de " +
+          bd[i].rule[1] +
+          " veces, por lo que: Contraseña correcta!"
+      );
+      correct_passwords += 1;
     } else {
-      console.log("aparece menos de " + bd[1].rule[0] + " veces o  más de " + bd[1].rule[1] + " veces, por lo que  contraseña incorrecta!");
+      console.log(
+        "aparece menos de " +
+          bd[i].rule[0] +
+          " veces o  más de " +
+          bd[i].rule[1] +
+          " veces, por lo que  contraseña incorrecta!"
+      );
     }
-  
-  return indices.length;
+  }
+
+  return correct_passwords;
 }
