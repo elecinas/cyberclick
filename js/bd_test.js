@@ -90,13 +90,20 @@ function correctPasswordI() {
   for (let i = 0; i < bd.length; i++) {
     var string = bd[i].password;
     var indices = [];
-
+//control
+    console.log(bd[i].password);
+    console.log(bd[i].letter);
+    console.log(bd[i].rule[0]);
+    console.log(bd[i].rule[1]);
+//control
     for (var j = 0; j < string.length; j++) {
       if (string[j].toLowerCase() === bd[i].letter) indices.push(j);
     }
 
     if (indices.length > bd[i].rule[0] && indices.length < bd[i].rule[1]) {
       correct_passwords += 1;
+      //control
+      console.log(bd[i].letter + ' aparece ' + indices.length + ' veces, es correcta.');
     }
   }
 
@@ -127,30 +134,30 @@ function correctPasswordII() {
     var string_pos = 0;
     var is_letter_1 = false;
     var is_letter_2 = false;
-
+/*
     console.log(bd[i].password);
     console.log(bd[i].letter);
     console.log(bd[i].rule[0]);
     console.log(bd[i].rule[1]);
-
+*/
     for (var j = 0; j < string.length; j++) {
       string_pos += 1;
 
 
       if (string[j].toLowerCase() === bd[i].letter && string_pos == bd[i].rule[0]) {
         is_letter_1 = true;
-        console.log('está en la primera posición');
+        /*console.log('está en la primera posición');*/
       }
 
       if (string[j].toLowerCase() === bd[i].letter && string_pos == bd[i].rule[1]) {
         is_letter_2 = true;
-        console.log('está en la segunda posición');
+        /*console.log('está en la segunda posición');*/
       }
     }
     
     if(is_letter_1 ^ is_letter_2){
       correct_passwords += 1;
-      console.log('¡válida!');
+      /*console.log('¡válida!');*/
     }
   }
 
